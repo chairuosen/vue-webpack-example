@@ -5,7 +5,7 @@ var router = new VueRouter({
     history:true,
     hashbang:false
 });
-require("./route.js")(router);
+require("./router.js")(router);
 
 var rootScope = Vue.extend(require('./page/root.vue'));
 router.start(rootScope,'body');
