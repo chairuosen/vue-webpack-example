@@ -1,7 +1,14 @@
 <style>
+    .icon-doge{
+        width:200px;
+        height:200px;
+        background:url(../img/doge.jpg);
+        background-size:100%;
+    }
 </style>
 <template>
     <h2>{{title}}</h2>
+    <div class="icon-doge"></div>
 </template>
 
 <script>

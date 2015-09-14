@@ -19,6 +19,7 @@
             return {
                 title:"Main Title"
             }
-        }
+        },
+        replace:false
     }
 </script>
