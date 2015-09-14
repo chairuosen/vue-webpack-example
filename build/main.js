@@ -340,7 +340,7 @@ function(t,e){t.exports="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCE
 function(t,e){t.exports={data:function(){return{title:"这是页面2"}}}},/*!*********************************************************************************************!*\
   !*** ./~/html-loader!./~/vue-loader/lib/selector.js?type=template&index=0!./page/page2.vue ***!
   \*********************************************************************************************/
-function(t,e){t.exports="<h2>{{title}}</h2><div class=icon-doge></div>"},/*!***********************!*\
+function(t,e){t.exports="<h2>{{title}}</h2><p>id:{{$route.params.id}}</p><div class=icon-doge></div>"},/*!***********************!*\
   !*** ./page/root.vue ***!
   \***********************/
 function(t,e,n){n(/*! -!style!css!less!./../~/vue-loader/lib/selector.js?type=style&index=0!./root.vue */118),t.exports=n(/*! -!./../~/vue-loader/lib/selector.js?type=script&index=0!./root.vue */120),t.exports.template=n(/*! -!html!./../~/vue-loader/lib/selector.js?type=template&index=0!./root.vue */121)},/*!*************************************************************************************************************************!*\
@@ -355,5 +355,5 @@ function(t,e,n){e=t.exports=n(/*! ./../~/css-loader/lib/css-base.js */107)(),e.p
 function(t,e){t.exports={data:function(){return{title:"Main Title"}},replace:!1}},/*!********************************************************************************************!*\
   !*** ./~/html-loader!./~/vue-loader/lib/selector.js?type=template&index=0!./page/root.vue ***!
   \********************************************************************************************/
-function(t,e){t.exports="<header><h1>{{title}}</h1></header><nav><a v-link=\"{path:'/'}\">page1</a> <a v-link=\"{path:'/inner?a=1'}\">page2</a></nav><p>路径：{{$route.path}}</p><p>捕获：{{$route.params | json}}</p><p>参数：{{$route.query | json}}</p><router-view></router-view>"}]);
+function(t,e){t.exports="<header><h1>{{title}}</h1></header><nav><a v-link=\"{path:'/'}\">page1</a> <a v-link=\"{path:'/inner?a=1'}\">page2</a> <a v-link=\"{path:'/inner/123'}\">page3</a></nav><p>路径：{{$route.path}}</p><p>匹配：{{$route.params | json}}</p><p>参数：{{$route.query | json}}</p><router-view></router-view>"}]);
 //# sourceMappingURL=main.js.map

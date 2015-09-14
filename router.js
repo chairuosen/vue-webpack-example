@@ -1,6 +1,6 @@
 var Vue = require('vue');
-module.exports = function(route){
-    route.map({
+module.exports = function(router){
+    router.map({
         '/': {
             component: Vue.extend(require('./page/page1.vue'))
         },

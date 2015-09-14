@@ -8,6 +8,7 @@
 </style>
 <template>
     <h2>{{title}}</h2>
+    <p>id:{{$route.params.id}}</p>
     <div class="icon-doge"></div>
 </template>
 

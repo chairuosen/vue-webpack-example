@@ -10,6 +10,7 @@
     <nav>
         <a v-link="{path:'/'}">page1</a>
         <a v-link="{path:'/inner?a=1'}">page2</a>
+        <a v-link="{path:'/inner/123'}">page3</a>
     </nav>
     <p>路径：{{$route.path}}</p>
     <p>匹配：{{$route.params | json}}</p>
