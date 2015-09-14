@@ -10,6 +10,7 @@ module.exports = {
     entry:'./main.js',
     output:{
         path:'build',
+        publicPath:'/build/',
         filename:'[name].js'
     },
     module:{
@@ -24,5 +25,5 @@ module.exports = {
             }
         ]
     },
-    plugins:[commonsPlugin,uglyPlugin]
+    plugins:[]
 }

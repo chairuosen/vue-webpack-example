@@ -2,13 +2,19 @@ var Vue = require('vue');
 module.exports = function(router){
     router.map({
         '/': {
-            component: Vue.extend(require('./page/page1.vue'))
+            component: function(resolve){
+                require(['./page/page1.vue'],resolve);
+            }
         },
         '/inner':{
-            component: Vue.extend(require('./page/page2.vue'))
+            component: function(resolve){
+                require(['./page/page2.vue'],resolve);
+            }
         },
         '/inner/:id':{
-            component: Vue.extend(require('./page/page2.vue'))
+            component: function(resolve){
+                require(['./page/page3.vue'],resolve);
+            }
         }
     });
 
