@@ -7,9 +7,11 @@ var uglyPlugin = new webpack.optimize.UglifyJsPlugin({
 });
 
 module.exports = {
-    entry:'./main.js',
+    entry:{
+        'main':['./main.js']
+    },
     output:{
-        path:'build',
+        path:'./build',
         publicPath:'/build/',
         filename:'[name].js'
     },
@@ -21,9 +23,12 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg)$/,
-                loader: 'url-loader?limit=81920'
+                loader: 'url-loader?limit=819'
             }
         ]
     },
-    plugins:[uglyPlugin]
+    plugins:[
+        // uglyPlugin,
+        // commonsPlugin
+    ]
 }

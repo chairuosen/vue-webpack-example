@@ -7,7 +7,7 @@
     }
 </style>
 <template>
-    <h2>{{title}}</h2>
+    <h2 v-on="click:a();">{{title}}</h2>
 </template>
 
 <script>
@@ -15,6 +15,11 @@
         data:function(){
             return {
                 title:'This is page 1'
+            }
+        },
+        methods:{
+            a:function(){
+                this.$dispatch('title_click',this.title);
             }
         }
     }

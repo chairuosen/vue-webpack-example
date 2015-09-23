@@ -14,11 +14,13 @@
     "html-loader": "^0.3.0",
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
+    "mmmagic": "^0.4.0",
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6",
     "vue": "^0.12.14",
     "vue-loader": "^3.0.3",
     "vue-router": "^0.6.0",
-    "webpack": "^1.12.1"
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.11.0"
   }
 }

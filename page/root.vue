@@ -1,4 +1,5 @@
 <style lang="less">
+    @import "style";
     nav{
         a{
             color:green;
@@ -24,6 +25,11 @@
                 title:"Main Title"
             }
         },
-        replace:false
+        replace:false,
+        ready:function(){
+            this.$on('title_click',function(a){
+                alert(a);
+            });
+        }
     }
 </script>
