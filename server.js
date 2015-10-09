@@ -33,3 +33,4 @@ require('http').createServer(function(req,res){
     }
     
 }).listen(5000);
+console.log('listen:5000');

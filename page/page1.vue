@@ -19,7 +19,7 @@
         },
         methods:{
             a:function(){
-                this.$dispatch('title_click',this.title);
+                this.$dispatch('alert',this.title);
             }
         }
     }

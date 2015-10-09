@@ -9,7 +9,7 @@
 <template>
     <header><h1>{{title}}</h1></header>
     <nav>
-        <a v-link="{path:'/'}">page1</a>
+        <a v-link="{name:'home'}">page1</a>
         <a v-link="{path:'/inner?a=1'}">page2</a>
         <a v-link="{path:'/inner/123'}">page3</a>
     </nav>
@@ -22,12 +22,12 @@
     module.exports = {
         data:function(){
             return {
-                title:"Main Title"
+                title:"Main Title12"
             }
         },
         replace:false,
         ready:function(){
-            this.$on('title_click',function(a){
+            this.$on('alert',function(a){
                 alert(a);
             });
         }
