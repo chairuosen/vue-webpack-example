@@ -1,6 +1,7 @@
 var Vue = require('vue');
 var VueRouter = require('vue-router')
 Vue.use(VueRouter);
+Vue.use(require('vue-resource'));
 var router = new VueRouter({
     history:true,
     hashbang:false // url = html5mode

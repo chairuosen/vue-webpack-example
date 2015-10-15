@@ -29,7 +29,19 @@ require('http').createServer(function(req,res){
         });
         
     }else{
-        res.end(require('fs').readFileSync('./index.html'));
+        // console.log(req.url);
+        if(req.url=='/test'){
+            setTimeout(function(){
+                res.end(JSON.stringify({
+                    code:0,
+                    data:{
+                        test:true
+                    }
+                }));
+            },2000);
+        }else{
+            res.end(require('fs').readFileSync('./index.html'));
+        }
     }
     
 }).listen(5000);
