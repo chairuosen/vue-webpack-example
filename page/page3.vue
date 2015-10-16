@@ -18,12 +18,14 @@
     module.exports = {
         data:function(){
             return {
-                title:'这是页面3'
+                title:'这是页面3',
+                test:"empty"
             }
         },
         route:{
+            waitForData: true,
             data:function(){
-                return{
+                return {
                     test:testApi.getRequestTest()
                 }
             }
