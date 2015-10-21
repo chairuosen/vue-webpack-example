@@ -22,7 +22,7 @@
     module.exports = {
         data:function(){
             return {
-                title:"Main Title123"
+                title:"Main Title1234"
             }
         },
         replace:false,

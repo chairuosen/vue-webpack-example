@@ -9,6 +9,7 @@ var config = require('./webpack.config.js');
   config.entry.main.unshift(one);
 })
 config.plugins.unshift(new webpack.HotModuleReplacementPlugin());
+config.output.path = "/";
 config.debug = true;
 var server = new WebpackDevServer(webpack(config), {
   contentBase: "./",

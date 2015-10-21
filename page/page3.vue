@@ -23,14 +23,14 @@
             }
         },
         route:{
-            waitForData: true,
-            data:function(){
-                return {
-                    test:testApi.getRequestTest().catch(function(err){
-                        return null;
-                    })
-                }
-            }
+            // waitForData: true,
+            // data:function(){
+            //     return {
+            //         test:testApi.getRequestTest().catch(function(err){
+            //             return null;
+            //         })
+            //     }
+            // }
         }
     }
 </script>
