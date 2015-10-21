@@ -26,7 +26,9 @@
             waitForData: true,
             data:function(){
                 return {
-                    test:testApi.getRequestTest()
+                    test:testApi.getRequestTest().catch(function(err){
+                        return null;
+                    })
                 }
             }
         }

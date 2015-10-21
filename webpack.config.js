@@ -21,7 +21,7 @@ module.exports = {
         'main':['./main.js']
     },
     output:{
-        path:'./build',
+        path:'/',
         publicPath:'/build/',
         filename:'[name].js'
     },
