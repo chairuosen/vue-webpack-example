@@ -11,6 +11,7 @@ module.exports = function(router){
             }
         },
         '/inner/:id':{
+            name:'detail',
             component: function(resolve){
                 require(['./page/page3.vue'],resolve);
             }

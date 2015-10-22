@@ -11,6 +11,7 @@
     <p>id:{{$route.params.id}}</p>
     <div class="icon-doge"></div>
     <div>Resolve:{{ test | json }}</div>
+    <a v-link="{path:'/inner/'+test}">go</a>
 </template>
 
 <script>
@@ -24,13 +25,11 @@
         },
         route:{
             // waitForData: true,
-            // data:function(){
-            //     return {
-            //         test:testApi.getRequestTest().catch(function(err){
-            //             return null;
-            //         })
-            //     }
-            // }
+            data:function(transition){
+                return {
+                    test:testApi.getRequestTest(transition.to.params.id)
+                }
+            }
         }
     }
 </script>
