@@ -9,7 +9,6 @@
 <template>
     <h2>{{title}}</h2>
     <p>id:{{$route.params.id}}</p>
-    <div class="icon-doge"></div>
     <div>Resolve:{{ test | json }}</div>
     <div>Loading:{{$loadingRouteData}}</div>
     <a v-link="{path:'/inner/'+test}">go</a>
