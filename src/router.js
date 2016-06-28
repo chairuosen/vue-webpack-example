@@ -1,6 +1,12 @@
 module.exports = function (router) {
     var defaultTitle = document.title;
-    router.map(require('./route.js'));
+    router.map({
+        '/': {
+            name: 'index',
+            title: 'Index',
+            component: require('./views/index.vue')
+        }
+    });
 
     router.redirect({
         '*': '/'
