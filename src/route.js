@@ -1,7 +1,7 @@
 module.exports = {
-    '/index': {
+    '/': {
         name: 'index',
-        title: '数据详情',
+        title: 'Index',
         component: require('./views/index.vue')
     }
 };

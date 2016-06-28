@@ -1,9 +1,6 @@
 module.exports = function (router) {
     var defaultTitle = document.title;
     router.map(require('./route.js'));
-    router.alias({
-        '/': "/index"
-    });
 
     router.redirect({
         '*': '/'
