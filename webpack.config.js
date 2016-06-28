@@ -1,35 +1,33 @@
-/*
-    To start a dev server
-    ===========================
-    
-    ```
-    npm install -g webpack-dev-server
-    webpack-dev-server  --hot --inline --port 5000
-    ```
-    then open localhost:5000 in browser
-*/
 var webpack = require('webpack');
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
-var uglyPlugin = new webpack.optimize.UglifyJsPlugin({
-    compress: {
-        warnings: false
-    }
-});
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
 
 module.exports = {
+    resolve:{
+        root:[path.join(__dirname,"src")],
+        extensions:["",".js",".vue"]
+    },
     entry:{
-        'main':['./main.js']
+        'main':['./src/entry.js']
     },
     output:{
-        path:'./build/',
-        publicPath:'/build/',
-        filename:'[name].js'
+        path:'./dist',
+        publicPath:'./',
+        filename:'[name].[hash].js'
     },
-    module:{
-        loaders:[
+    module: {
+        loaders: [
             {
-                test:/\.vue$/,
-                loader:'vue'
+                test: /\.less$/,
+                loader: "style!css!less"
+            },
+            {
+                test: /\.html$/,
+                loader: "html"
+            },
+            {
+                test: /\.vue$/,
+                loader: "vue"
             },
             {
                 test: /\.(png|jpg)$/,
@@ -37,8 +35,8 @@ module.exports = {
             }
         ]
     },
+    devtool:"cheap-module-source-map",
     plugins:[
-        // uglyPlugin,
-        // commonsPlugin
+        new HtmlWebpackPlugin()
     ]
 }
