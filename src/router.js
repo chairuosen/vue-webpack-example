@@ -1,5 +1,5 @@
 module.exports = function (router) {
-    var defaultTitle = document.title;
+    
     router.map({
         '/': {
             name: 'index',
@@ -12,12 +12,15 @@ module.exports = function (router) {
         '*': '/'
     });
 
+
+
     var timer = 0;
     setInterval(function () {
         timer = 0;
     }, 1000);
 
     window.$router = router;
+    var defaultTitle = document.title;
 
     router.beforeEach(function (transition) {
         var to = transition.to;
